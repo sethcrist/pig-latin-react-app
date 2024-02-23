@@ -38,6 +38,10 @@ const App = () => {
           let quWord = eachWord.slice(0, eachWord.indexOf("u") + 1) //keeps the first part
           let wordEnd = eachWord.slice(eachWord.indexOf("u") + 1) //keeps the second part
           return wordEnd + quWord + "ay"
+        } else if (eachWord.includes("y") && vowelsArray.length === 0) {
+          let yWord = eachWord.slice(0, eachWord.indexOf("y"))
+          let yEnd = eachWord.slice(eachWord.indexOf("y"))
+          return yEnd + yWord + "ay"
         }
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
